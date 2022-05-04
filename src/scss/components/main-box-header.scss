@@ -1,0 +1,92 @@
+// main-box-header
+$bread-crumbs-span: rgba(101, 101, 101, 0.9);
+$bread-crumbs-color: #656565;
+$user-border-radius: 7px;
+
+
+
+.main-box__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bread-crumbs {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+    color: $nav-menu-color;
+
+    span {
+        display: block;
+        margin: 0 5px;
+        width: 7px;
+        height: 10px; // 10px т.к. ближе к макету
+        background-color: $bread-crumbs-color;
+    }
+}
+
+.user {
+    height: 65px;
+    display: flex;
+
+    &__left,
+    &__right {
+        height: 100%;
+    }
+
+    &__left {
+        background: rgba(0, 0, 0, 0.0001);
+        border: 1px solid #D4D4D4;
+        box-sizing: border-box;
+        border-radius: $user-border-radius;
+        width: 65px;
+        position: relative;
+        margin-right: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__right {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 16px rgba(136, 167, 245, 0.18);
+        border-radius: $user-border-radius;
+        min-width: 265px;
+        color: #7D7D7D;
+
+        padding: 22px 5px 5px 78px;
+    }
+
+    &__box {
+        width: 22px;
+        height: 18px;
+        background-color: #7B7B7B;
+    }
+
+    &__round {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 17px;
+        top: 19px;
+
+        right: 15px;
+        top: 14px;
+        z-index: 1;
+        width: 14px;
+        background: white;
+        height: 14px;
+        border-radius: 50%;
+
+        &-red {
+            background-color: #E42626;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+        }
+    }
+}
